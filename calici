@@ -1,0 +1,31 @@
+class Calculator {
+    int a, b;
+Calculator(int x, int y) {
+        a = x;
+        b = y;
+        perform();
+    }
+  Calculator(int x) {
+        a = x;
+        b = 5;
+        perform();
+    }
+
+    void perform() {
+        System.out.println("Numbers: " + a + ", " + b);
+        System.out.println("Addition: " + (a + b));
+        System.out.println("Subtraction: " + (a - b));
+        System.out.println("Multiplication: " + (a * b));
+        if (b != 0) {
+            System.out.println("Division: " + (a / b));
+            System.out.println("Modulus: " + (a % b));
+        } else {
+            System.out.println("Division and Modulus: Cannot divide by zero");
+        }
+    }
+
+    public static void main(String[] args) {
+        Calculator c1 = new Calculator(20, 4);
+        Calculator c2 = new Calculator(15);
+    }
+}
