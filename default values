@@ -1,0 +1,16 @@
+class Student {
+    int ID;
+    String Name;
+    int Marks;
+
+public void display() {
+System.out.println("Default Student Details");
+System.out.println("ID: " + ID);
+System.out.println("Name: " + Name);
+System.out.println("Marks: " + Marks);
+}
+public static void main(String[] args) {
+Student s = new Student(); 
+s.display();               
+}
+}
