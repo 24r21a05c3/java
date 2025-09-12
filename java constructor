@@ -1,0 +1,16 @@
+class College {
+String name;
+String location;   
+public College(String collegeName, String collegeLocation) {
+this.name = collegeName;
+this.location = collegeLocation;
+}  
+public void displayData() {
+System.out.println("College Name: " + name);
+System.out.println("Location: " + location);
+}   
+public static void main(String[] args) {
+College mlrit = new College("MLR Institute of Technology", "Hyderabad");        
+mlrit.displayData();
+}
+}
