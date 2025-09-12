@@ -1,0 +1,24 @@
+class Employee {
+    int da;
+    int ta;
+    int hra;
+    int epf;
+    int netSalary;
+Employee(int da, int ta, int hra, int epf) {
+        this.da = da;
+        this.ta = ta;
+        this.hra = hra;
+        this.epf = epf;
+        this.netSalary = (da + ta + hra) - epf;}
+void showInfo() {
+        System.out.println("Dearness : " + da);
+        System.out.println("Travel : " + ta);
+        System.out.println("House Rent : " + hra);
+        System.out.println("Employee PF: " + epf);
+        System.out.println("Calculated Net Salary: " + netSalary);
+    }
+ public static void main(String[] args) {
+        Employee emp = new Employee(5000, 2000, 3000, 1500);
+        emp.showInfo();
+    }
+}
