@@ -1,0 +1,31 @@
+#include<stdio.h>
+#define size 6
+int bs(int arr[],int low,int high,int target) {
+	while(low<=high) {
+		int mid=(low + high)/2;
+		if(arr[mid]==target) {
+			return mid;
+		}
+		if(arr[mid]<target) {
+			return mid;
+		}
+		if(arr[mid]<target) {
+			low=mid+1;
+		}else{
+			high=mid-1;
+		}
+	}
+	return -1;
+}
+int main()
+{
+	int arr[size]={12,32,4,45,54,43};
+	int target=12;
+	int result=bs(arr,0,size-1,target);
+	if(result != -1) {
+		printf("Element %d found at index %d\n",target,result);
+	}else{
+		printf("Element %d not found in array\n",target);
+	}
+	return 0;
+}
